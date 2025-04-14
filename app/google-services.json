@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767442746034",
+    "project_id": "mobilalk2025",
+    "storage_bucket": "mobilalk2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767442746034:android:ea53b850a101ca5f41e7ab",
+        "android_client_info": {
+          "package_name": "com.example.mobilalk2025"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCsgS-6t0Q591CCFCOKkkQosg3Cdo9j2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
