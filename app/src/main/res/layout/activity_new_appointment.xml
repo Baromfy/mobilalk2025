@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".NewAppointmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Új időpontfoglalás"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Szolgáltatás"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/serviceNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="#F5F5F5"
+                    android:textSize="16sp"
+                    android:text="Válassz szolgáltatást"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Időpont"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/dateTimeTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="#F5F5F5"
+                    android:textSize="16sp"
+                    android:text="Válassz időpontot"/>
+
+                <Button
+                    android:id="@+id/selectDateTimeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Időpont kiválasztása"
+                    android:layout_marginTop="8dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Megjegyzés"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/notesEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="2"
+                    android:maxLines="4"
+                    android:inputType="textMultiLine"
+                    android:hint="Különleges kérés, megjegyzés (opcionális)"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/bookAppointmentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Időpont lefoglalása"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#4CAF50"/>
+
+            <Button
+                android:id="@+id/addToCalendarButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hozzáadás a naptárhoz"
+                android:backgroundTint="#03A9F4"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>

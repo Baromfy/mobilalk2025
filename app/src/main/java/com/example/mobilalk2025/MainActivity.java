@@ -28,17 +28,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Firebase Auth inicializálása
+
         mAuth = FirebaseAuth.getInstance();
 
-        // View elemek inicializálása
+
         emailEditText = findViewById(R.id.emailEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         loginButton = findViewById(R.id.loginButton);
         errorTextView = findViewById(R.id.errorTextView);
         Button registerButton = findViewById(R.id.registerButton);
 
-        // Bejelentkezés gomb eseményfigyelője
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(intent); // Activity indítása
+                startActivity(intent); 
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); // Animáció
             }
         });
@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        // Ellenőrizzük, hogy van-e bejelentkezett felhasználó
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            // Ha van bejelentkezett felhasználó, navigálj a főoldalra
+
             navigateToHome();
         }
     }
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 
-        // Validáció
+
         if (email.isEmpty()) {
             showError("Kérjük, add meg az email címed!");
             return;
@@ -93,19 +93,19 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // Firebase hitelesítés
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sikeres bejelentkezés
+
                             hideError();
                             Toast.makeText(MainActivity.this, "Sikeres bejelentkezés!",
                                     Toast.LENGTH_SHORT).show();
                             navigateToHome();
                         } else {
-                            // Sikertelen bejelentkezés
+
                             showError("Hibás email cím vagy jelszó!");
                         }
                     }

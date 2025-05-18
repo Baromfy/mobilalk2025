@@ -1,69 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/main"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:fillViewport="true"
+    android:fadeScrollbars="false"
+    android:scrollbars="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bejelentkezés"
-        android:textSize="24sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="24dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email cím"
-        android:layout_marginBottom="4dp"/>
-
-    <EditText
-        android:id="@+id/emailEditText"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="pelda@email.com"/>
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jelszó"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="4dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bejelentkezés"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
 
-    <EditText
-        android:id="@+id/passwordEditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:hint="********"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email cím"
+            android:layout_marginBottom="4dp"/>
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bejelentkezés"
-        android:layout_marginTop="24dp"/>
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="pelda@email.com"/>
 
-    <TextView
-        android:id="@+id/errorTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#FF0000"
-        android:layout_marginTop="16dp"
-        android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jelszó"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
 
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Regisztráció"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#4CAF50"/>
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="********"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bejelentkezés"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regisztráció"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4CAF50"/>
+
+    </LinearLayout>
+</ScrollView>
